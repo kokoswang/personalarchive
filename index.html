@@ -1,1 +1,113 @@
-love u
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kos Wang</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:500,900" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a class="nav-links" href="project.html" onmouseover = "this.innerHTML = 'WORK';" onmouseout = "this.innerHTML='K'";> K </a></li>
+                <div class="dropdown">
+                  <li class="dropbtn"><a class="nav-links" onmouseover = "this.innerHTML = 'PROJECTS';" onmouseout = "this.innerHTML='O'";>O</a></li>
+                  <div class="dropdown-content">
+                    <a href="https://www.google.com">1</a>
+                    <a href="https://www.google.com">2</a>
+                    <a href="https://www.google.com">3</a>
+                  </div>
+                </div>
+              <li><a class="nav-links" onmouseover = "this.innerHTML = 'MYSELF'; stateAppear();" onmouseout = "this.innerHTML='S'; stateDis();"; id=state>S</a></li>
+        </nav>
+    </header>
+    <div class="landing">
+        <figure><img class="land_img" src="img/work11.jpg" alt="past work" id="gallery-image"/></figure>
+    </div>
+    <div class="slide">
+        <a onclick="changeImg()">WANG</a>
+    </div>
+    <script>
+        var image =  document.getElementById("gallery-image");
+        function changeImg(){
+            if (image.getAttribute('src') == "img/work11.jpg"){
+                image.src = "img/work20.png";
+            } else if (image.getAttribute('src') == "img/work20.png") {
+                image.src = "img/work6.jpg";
+            } else if (image.getAttribute('src') == "img/work6.jpg"){
+                image.src = "img/work21.jpg";
+            } else if (image.getAttribute('src') == "img/work21.jpg"){
+                image.src = "img/work3.jpg";
+            } else {image.src = "img/work11.jpg";}
+        }
+
+        var x = 995;
+        var y = 155;
+        var width = 480;
+        var height = 600;
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+            function stateAppear(){
+                canvas.style.width='100%';
+                canvas.style.height='100%';
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                canvas.style.position='absolute';
+                canvas.style.left=0;
+                canvas.style.top=0;
+                canvas.style.zIndex=100000;
+                canvas.style.pointerEvents='none';
+                document.body.appendChild(canvas);
+                context.fillStyle = '#bf1411';
+                context.fillRect(x, y, width, height);
+                context.fillStyle = '#ffffff';
+                context.font="14px Montserrat";
+                context.fillText('I make my artworks by utilizing my art skills, getting',x+40, y+50);
+                context.fillText('inspirations from the world around me, applying',x+40, y+70);
+                context.fillText('technological innovations, and examining life experiences.',x+40, y+90);
+                context.fillText('I have been studying various arts since a young age,',x+40, y+110);
+                context.fillText('winning multiple honors and awards. Also, I am inspired',x+40, y+130);
+                context.fillText('by artists (many of whom graduated from Parsons) such',x+40, y+150);
+                context.fillText('as Allen Yee (co-founder of Cloudred), Ji Lee (Facebook',x+40, y+170);
+                context.fillText('communication designer), Donna Karan, Michael Kors,',x+40, y+190);
+                context.fillText('Anna Sui, Alexander Wang, Jason Wu, Anna Wintour,',x+40, y+210);
+                context.fillText('Rei Kawakubo, and many more. Being a quick learner',x+40, y+230);
+                context.fillText('Anna Sui, Alexander Wang, Jason Wu, Anna Wintour,',x+40, y+250);
+                context.fillText('of technology, I taught myself how to use computer',x+40, y+270);
+                context.fillText('programs, including Adobe Illustrator, Photoshop, In',x+40, y+290);
+                context.fillText('Design, and others.',x+40, y+310);
+                context.fillText('I make arts for a number of reasons. First, art can be',x+40, y+350);
+                context.fillText('expressed as a form of communication. For example, my',x+40, y+370);
+                context.fillText('magazine showcases not just art and fashion, but it also',x+40, y+390);
+                context.fillText('analyzes the lives of artists and models as well as their ',x+40, y+410);
+                context.fillText('worldviews. Also, it can promote collaborations between',x+40, y+430);
+                context.fillText('Asian artists and Western artists. Furthermore, art can be ',x+40, y+450);
+                context.fillText('applied to explore emotional content, express different ',x+40, y+470);
+                context.fillText('visions, bring people together, and raise consciousness.',x+40, y+490);
+                context.fillText(' - Kos Wang',x+350, y+550);
+            }
+            function stateDis(){
+                canvas.style.width='100%';
+                canvas.style.height='100%';
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                canvas.style.position='absolute';
+                canvas.style.left=0;
+                canvas.style.top=0;
+                canvas.style.zIndex=100000;
+                canvas.style.pointerEvents='none';
+                document.body.appendChild(canvas);
+                context.fillStyle = '#bf1411';
+                context.clearRect(x, y, width, height);
+
+            }
+    </script>
+    <footer>
+        <p><small>&copy; Kos Wang</small></p>
+    </footer>
+</body>
+
+</html>

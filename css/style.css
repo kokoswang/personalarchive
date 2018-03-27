@@ -1,0 +1,212 @@
+body{
+    font-family: Montserrat;
+    background-color: black;
+    width: 100%;
+    cursor: url('../img/icon/cursor1.png'), auto;
+}
+h1{
+  color: white;
+  margin: 0;
+}
+ul{
+  padding: 0;
+  width: 100%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+li{
+  display: inline-block;
+  font-weight: 800;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.nav-links{
+  text-decoration: none;
+  color: #bf1411;
+  font-size: 100px;
+  cursor: url('../img/icon/cursor2.png'), auto;
+}
+.wang{
+    cursor: url('../img/icon/cursor2.png'), auto;
+    display: block;
+    font-weight: 900;
+    font-size: 100px;
+    text-decoration: none;
+    color: #bf1411;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.slide:hover {
+    color: white;
+}
+.slide{
+  width: 350px;
+  color: #bf1411;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 100px;
+  font-weight: 800;
+  cursor: url('../img/icon/cursor2.png'), auto;
+}
+figure{
+  margin: 0;
+}
+.landing{
+  width: 100%;
+  margin: auto;
+
+}
+.land_img {
+  display: block;
+  margin:auto;
+  max-height: 600px;
+  overflow: hidden;
+}
+.project {
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    max-height: 600px;
+}
+.projectdes {
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    max-height: 600px;
+}
+.page-count {
+    color: #bf1411;
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+}
+.page-next {
+    color: #bf1411;
+    top: 400px;
+    right: 100px;
+    font-size: 100px;
+    font-weight: 900;
+    z-index: 1;
+    position: fixed;
+    cursor: url('../img/icon/cursor2.png'), auto;
+}
+.page-previous {
+    color: #bf1411;
+    top: 400px;
+    left: 100px;
+    font-size: 100px;
+    font-weight: 900;
+    z-index: 1;
+    position: fixed;
+    cursor: url('../img/icon/cursor2.png'), auto;
+    /* TEST */
+    margin: 20px;
+    padding: 20px;
+}
+.totalpage{
+    margin: auto;
+    margin-bottom: 2%;
+    padding-left: 5px;
+    max-height: 70px;
+    max-width: 70px;
+
+}
+p{
+  margin: auto;
+}
+footer{
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+.flip-container {
+	perspective: 1000px;
+    margin: auto;
+    overflow: visible;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+.flip-container, .project-pic, .back-des {
+	width: 1000px;
+	height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.project-pic, .back-des {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+    cursor: url('../img/icon/cursor2.png'), auto;
+}
+.project-pic {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.back-des {
+	transform: rotateY(180deg);
+}
+.dropbtn {
+    color: white;
+    margin: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #bf1411;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 40px;
+    display: block;
+    font-weight: 900;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #bf1411;
+    color: white;
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

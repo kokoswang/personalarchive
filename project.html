@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:500,900" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class"back-home">
+            <a class="wang" href="index.html" > WANG </a>
+        </nav>
+    </header>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    	<div class="flipper">
+            <div class="project-pic">
+                <figure id="workpic">
+                        <img class="project" src="img/work1.jpg" alt="work" id="project-image"/>
+                </figure>
+            </div>
+        	<div class="back-des">
+                <figure id="workdes">
+                        <img class="projectdes" src="img/workdes/workdes1.jpg" alt="work" id="project-image-des"/>
+                </figure>
+        	</div>
+        </div>
+    </div>
+    <div class="page-count">
+        <a id=pagecount_current>1</a>
+    </div>
+    <div class="page-previous" onclick="loadLastPage();" onclick="changeDes(work)">
+        <div id="pagecount_last_wrapper">
+            <div>19</div>
+        </div>
+    </div>
+    <div class="page-next">
+        <div id="pagecount_next_wrapper" onclick="loadNextPage();">
+            <div>2</div>
+        </div>
+    </div>
+    <script>
+        function changeDes(work) {
+            document.getElementById("workDes").innerHTML = work;
+        }
+        var addAnimation = function (elementSelector, pageCountId, lastNumber, nextNumber) {
+            $(elementSelector).empty().append(
+             $('<div id="' + pageCountId + '"/>')
+                .append(
+                    $('<div class="front">' + lastNumber + '</div>', {})
+                ).append(
+                    $('<div class="back">' + nextNumber + '</div>', {})
+                )
+            );
+            $("#" + pageCountId).flip({
+                forceWidth: true,
+                axis: "x",
+                reverse: false
+            });
+            setTimeout(function() {
+                $("#" + pageCountId).flip(true);
+            }, 100);
+        };
+        var boundary = function (n) {
+            if (n < 1) {
+                return 19;
+            }
+            if (n > 19) {
+                return 1;
+            }
+            return n;
+        };
+        var changePage = function (n) {
+            var pageCountElement = document.getElementById("pagecount_current");
+            var currentNumber = parseInt(pageCountElement.textContent);
+            var nextNumber = boundary(currentNumber + n);
+            if (nextNumber > 19) {
+                nextNumber = 1;
+            }
+            pageCountElement.textContent = nextNumber;
+            addAnimation(
+                "#pagecount_last_wrapper",
+                'pagecount_last',
+                boundary(currentNumber - 1),
+                boundary(nextNumber - 1)
+            );
+            addAnimation(
+                "#pagecount_next_wrapper",
+                'pagecount_next',
+                boundary(currentNumber + 1),
+                boundary(nextNumber + 1)
+            );
+            var imageElement = document.getElementById("project-image");
+            imageElement.src = "img/work" + nextNumber + ".jpg";
+            var imageElement = document.getElementById("project-image-des");
+            imageElement.src = "img/workdes/workdes" + nextNumber + ".jpg";
+        }
+        var loadNextPage = function() {
+            changePage(1);
+        };
+        var loadLastPage = function() {
+            changePage(-1);
+        };
+    </script>
+    <div class="totalpage">
+        <figure><img class="totalpage" src="img/icon/pagecount.png" alt="total page"/></figure>
+    </div>
+    <footer>
+        <p><small>&copy; Kos Wang</small></p>
+    </footer>
+</body>
+
+</html>

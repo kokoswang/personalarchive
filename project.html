@@ -16,6 +16,37 @@
             <a class="wang" href="index.html" > WANG </a>
         </nav>
     </header>
+
+        <div class="menu">
+
+           <div class="preview">
+               <img data-button="1" class="preview-pic" src="img/work1.jpg"> 
+               <img data-button="2" class="preview-pic" src="img/work2.jpg">    
+               <img data-button="7" class="preview-pic" src="img/work7.jpg"> 
+               <img data-button="8" class="preview-pic" src="img/work8.jpg"> 
+               <img data-button="9" class="preview-pic" src="img/work9.jpg"> 
+               <img data-button="12" class="preview-pic" src="img/work12.jpg">   
+               <img data-button="13" class="preview-pic" src="img/work13.jpg">
+               <img data-button="17" class="preview-pic" src="img/work17.jpg"> 
+               <img data-button="18" class="preview-pic" src="img/work18.jpg"> 
+              
+               <img data-button="3" class="preview-pic" src="img/work3.jpg"> 
+               <img data-button="4" class="preview-pic" src="img/work4.jpg"> 
+               <img data-button="5" class="preview-pic" src="img/work5.jpg"> 
+               <img data-button="6" class="preview-pic" src="img/work6.jpg"> 
+               <img data-button="10" class="preview-pic" src="img/work10.jpg"> 
+               <img data-button="11" class="preview-pic" src="img/work11.jpg"> 
+               <img data-button="14" class="preview-pic" src="img/work14.jpg"> 
+               <img data-button="15" class="preview-pic" src="img/work15.jpg"> 
+               <img data-button="16" class="preview-pic" src="img/work16.jpg"> 
+               <img data-button="19" class="preview-pic" src="img/work19.jpg"> 
+               <img data-button="20" class="preview-pic" src="img/work20.jpg"> 
+
+            </div>
+
+        </div>
+
+<div class="artworkdisplay hide" >
     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     	<div class="flipper">
             <div class="project-pic">
@@ -44,6 +75,21 @@
         </div>
     </div>
     <script>
+        
+
+        $('.preview-pic').click(function(){
+
+            $('.artworkdisplay').removeClass('hide');
+            $('.menu').addClass('hide');
+
+
+         var imageElement = document.getElementById("project-image");
+            imageElement.src = "img/work" + $(this).data('button') + ".jpg";
+            var imageElement = document.getElementById("project-image-des");
+            imageElement.src = "img/workdes/workdes" + $(this).data('button') + ".jpg";
+    });
+
+
         function changeDes(work) {
             document.getElementById("workDes").innerHTML = work;
         }
@@ -105,10 +151,15 @@
         var loadLastPage = function() {
             changePage(-1);
         };
+
+   
+
+        
     </script>
     <div class="totalpage">
         <figure><img class="totalpage" src="img/icon/pagecount.png" alt="total page"/></figure>
     </div>
+</div>
     <footer>
         <p><small>&copy; Kos Wang</small></p>
     </footer>

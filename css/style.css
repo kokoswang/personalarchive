@@ -183,10 +183,14 @@ footer{
 .dropdown-content {
     display: none;
     position: absolute;
+    left:30%;
     background-color: inherit;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    float: center;
+    display: inline-block;
+
 }
 
 /* Links inside the dropdown */

@@ -210,3 +210,26 @@ footer{
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.menu{
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  z-index:1111;
+  background:black;
+  top:-1;
+}
+
+.hide{display:none;}
+.preview{padding: 5px 200px 50px 100px}
+.preview-pic{
+  margin-top:10px;
+  margin-left: 100px;
+  display: inline-block;
+  width:10%;
+  height: 10%;
+  overflow: scroll;
+  border: solid 5px red;
+}
+
+

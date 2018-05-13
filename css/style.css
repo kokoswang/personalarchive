@@ -1,5 +1,5 @@
 body{
-    font-family: Montserrat, 'sans-serif';
+    font-family: Montserrat;
     background-color: black;
     width: 100%;
     cursor: url('../img/icon/cursor1.png'), auto;
@@ -183,14 +183,10 @@ footer{
 .dropdown-content {
     display: none;
     position: absolute;
-    left:30%;
     background-color: inherit;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    float: center;
-    display: inline-block;
-
 }
 
 /* Links inside the dropdown */
@@ -214,28 +210,3 @@ footer{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
-.menu{
-  width:100vw;
-  height:100vh;
-  position: fixed;
-  z-index:1111;
-  background:black;
-  top:-1;
-}
-
-.hide{display:none;}
-.preview{padding: 5px 200px 50px 100px}
-.preview-pic{
-  margin-top:10px;
-  margin-left: 100px;
-  display: inline-block;
-  width:10%;
-  height: 10%;
-  overflow: scroll;
-  border: solid 5px red;
-}
-
-
-
